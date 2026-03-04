@@ -2,7 +2,16 @@ export const APP_LOGO = "/logo.svg";
 export const APP_TITLE = "Signova AI";
 
 export const getLoginUrl = () => {
-  return "https://portal.signova.ai/login";
+  return "/login";
+};
+
+export const buildTemplateSignupPath = (templateId: string) => {
+  return `/register?path=generate\&template=${encodeURIComponent(templateId)}`;
+};
+
+export const buildPlanSignupPath = (planKey: string, price?: string) => {
+  const priceParam = price ? `\&price=${encodeURIComponent(price)}` : "";
+  return `/register?plan=${encodeURIComponent(planKey)}${priceParam}`;
 };
 
 export const getSignupUrl = (plan?: string, price?: string) => {

@@ -45,7 +45,6 @@ export default function Blog() {
   useEffect(() => {
     fetch("/api/blog/posts")
       .then((res) => {
-        console.log("Blog API response:", res.status);
         return res.json();
       })
       .then((data) => {

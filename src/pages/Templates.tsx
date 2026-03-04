@@ -1,3 +1,4 @@
+import { buildTemplateSignupPath } from "@/const";
 import React, { useState, useEffect } from 'react';
 import { Link } from "wouter";
 import { 
@@ -1149,22 +1150,23 @@ Date: _________________`;
                     <CardDescription>{docType.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Button 
-                      className={`w-full bg-gradient-to-r ${docType.color} hover:opacity-90`}
-                      disabled={demoCount >= 2}
-                    >
-                      {demoCount >= 2 ? (
-                        <>
+                    {demoCount >= 2 ? (
+                      <Link href={buildTemplateSignupPath(docType.id)} onClick={(e) => e.stopPropagation()}>
+                        <Button
+                          className={`w-full bg-gradient-to-r ${docType.color} hover:opacity-90`}
+                        >
                           <Lock className="w-4 h-4 mr-2" />
                           Subscribe to Access
-                        </>
-                      ) : (
-                        <>
-                          <Sparkles className="w-4 h-4 mr-2" />
-                          Generate Document
-                        </>
-                      )}
-                    </Button>
+                        </Button>
+                      </Link>
+                    ) : (
+                      <Button
+                        className={`w-full bg-gradient-to-r ${docType.color} hover:opacity-90`}
+                      >
+                        <Sparkles className="w-4 h-4 mr-2" />
+                        Generate Document
+                      </Button>
+                    )}
                   </CardContent>
                 </Card>
               );
@@ -1221,7 +1223,7 @@ Date: _________________`;
               <p className="text-xl mb-8 opacity-90">
                 Unlock unlimited document generation, e-signatures, and more
               </p>
-              <Link href="/checkout?plan=professional">
+              <Link href="/register?plan=professional">
                 <Button size="lg" className="bg-white text-indigo-600 hover:bg-gray-100">
                   <Star className="w-5 h-5 mr-2" />
                   Subscribe Now
@@ -1334,7 +1336,7 @@ Date: _________________`;
                   <Download className="w-4 h-4 mr-2" />
                   Download Demo (TXT)
                 </Button>
-                <Link href="/checkout?plan=professional">
+                <Link href="/register?plan=professional">
                   <Button className="w-full bg-gradient-to-r from-indigo-700 to-indigo-900">
                     <Star className="w-4 h-4 mr-2" />
                     Subscribe to Remove Watermark & Enable E-Signing
@@ -1401,7 +1403,7 @@ Date: _________________`;
               </ul>
             </div>
 
-            <Link href="/checkout?plan=professional">
+            <Link href="/register?plan=professional">
               <Button className="w-full bg-gradient-to-r from-indigo-700 to-indigo-900">
                 <Star className="w-4 h-4 mr-2" />
                 Subscribe Now - Starting at $19/month

@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { APP_LOGO, APP_TITLE, getLoginUrl, getSignupUrl } from "@/const";
+import { APP_LOGO, APP_TITLE, getLoginUrl, getSignupUrl, buildPlanSignupPath } from "@/const";
 import { CheckCircle2, X, Sparkles, Brain, Rocket, Zap, Loader2, ArrowRight} from "lucide-react";
 import MarketingNav from "@/components/MarketingNav";
 import MarketingFooter from "@/components/MarketingFooter";
@@ -337,23 +337,33 @@ export default function Pricing() {
                           </p>
                         )}
                       </div>
-                      <Button
-                        onClick={() => {
-                          if (meta.cta === "Contact Sales") {
-                            window.location.href = "mailto:sales@signova.ai";
-                          } else {
-                            window.location.href = getSignupUrl(tier.display_name || tier.tier_name, displayPrice);
-                          }
-                        }}
-                        className={`w-full mb-4 ${
-                          meta.highlight
-                            ? "bg-indigo-700 hover:bg-indigo-800"
-                            : ""
-                        }`}
-                        variant={meta.highlight ? "default" : "outline"}
-                      >
-                        {meta.cta === "GET_STARTED_CTA" ? primaryCtaText : meta.cta}
-                      </Button>
+                      {meta.cta === "Contact Sales" ? (
+                        <Link href="/contact?topic=enterprise">
+                          <Button
+                            className={`w-full mb-4 ${
+                              meta.highlight
+                                ? "bg-indigo-700 hover:bg-indigo-800"
+                                : ""
+                            }`}
+                            variant={meta.highlight ? "default" : "outline"}
+                          >
+                            Contact Sales
+                          </Button>
+                        </Link>
+                      ) : (
+                        <Link href={buildPlanSignupPath(tier.tier_key || (tier.tier_name || "").toLowerCase(), displayPrice)}>
+                          <Button
+                            className={`w-full mb-4 ${
+                              meta.highlight
+                                ? "bg-indigo-700 hover:bg-indigo-800"
+                                : ""
+                            }`}
+                            variant={meta.highlight ? "default" : "outline"}
+                          >
+                            {meta.cta === "GET_STARTED_CTA" ? primaryCtaText : meta.cta}
+                          </Button>
+                        </Link>
+                      )}
 
                       {meta.badge && (
                         <div className="mb-4 text-center">
@@ -558,13 +568,14 @@ export default function Pricing() {
                 Ready to stop overpaying? Switch to Signova AI today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  onClick={() => window.location.href = getSignupUrl()}
-                  className="bg-indigo-700 hover:bg-indigo-800"
-                >
-                  Get Started Free
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Link href={getSignupUrl()}>
+                  <Button
+                    className="bg-indigo-700 hover:bg-indigo-800"
+                  >
+                    Get Started Free
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
                 <Link href="/docusign-alternative">
                   <Button variant="outline">
                     See Full Comparison
@@ -606,21 +617,23 @@ export default function Pricing() {
             Join thousands of professionals using Signova to streamline their document workflows.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-white text-indigo-600 hover:bg-gray-100"
-              onClick={() => (window.location.href = getSignupUrl())}
-            >
-              {primaryCtaText}
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white text-white hover:bg-white/10"
-              onClick={() => (window.location.href = "mailto:sales@signova.ai")}
-            >
-              Contact Sales
-            </Button>
+            <Link href={getSignupUrl()}>
+              <Button
+                size="lg"
+                className="bg-white text-indigo-600 hover:bg-gray-100"
+              >
+                {primaryCtaText}
+              </Button>
+            </Link>
+            <Link href="/contact?topic=enterprise">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white/10"
+              >
+                Contact Sales
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
