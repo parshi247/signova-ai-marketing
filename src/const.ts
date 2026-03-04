@@ -1,26 +1,33 @@
 export const APP_LOGO = "/logo.svg";
 export const APP_TITLE = "Signova AI";
 
+// Portal base URL — all auth/checkout flows live here
+const PORTAL_BASE = "https://portal.signova.ai";
+
 export const getLoginUrl = () => {
-  return "/login";
+  return `${PORTAL_BASE}/login`;
+};
+
+export const getRegisterUrl = () => {
+  return `${PORTAL_BASE}/register`;
 };
 
 export const buildTemplateSignupPath = (templateId: string) => {
-  return `/register?path=generate\&template=${encodeURIComponent(templateId)}`;
+  return `${PORTAL_BASE}/register?path=generate&template=${encodeURIComponent(templateId)}`;
 };
 
 export const buildPlanSignupPath = (planKey: string, price?: string) => {
-  const priceParam = price ? `\&price=${encodeURIComponent(price)}` : "";
-  return `/register?plan=${encodeURIComponent(planKey)}${priceParam}`;
+  const priceParam = price ? `&price=${encodeURIComponent(price)}` : "";
+  return `${PORTAL_BASE}/register?plan=${encodeURIComponent(planKey)}${priceParam}`;
 };
 
 export const getSignupUrl = (plan?: string, price?: string) => {
   if (plan) {
     const planId = plan.toLowerCase();
     const priceParam = price || getPlanPrice(planId);
-    return `/checkout?plan=${encodeURIComponent(planId)}&price=${encodeURIComponent(priceParam)}&type=subscription`;
+    return `${PORTAL_BASE}/register?plan=${encodeURIComponent(planId)}&price=${encodeURIComponent(priceParam)}`;
   }
-  return "/register";
+  return `${PORTAL_BASE}/register`;
 };
 
 // Helper function to get default prices

@@ -53,10 +53,10 @@ export default function MarketingNav() {
         {/* Desktop CTA Buttons */}
         <div className="hidden md:flex items-center gap-4">
 
-          <a href="/register">
+          <a href={getLoginUrl()}>
             <Button variant="ghost" className="text-white hover:text-white hover:bg-white/10">Login</Button>
           </a>
-          <a href="/register">
+          <a href={getSignupUrl()}>
             <Button>Get Started</Button>
           </a>
         </div>
@@ -97,12 +97,12 @@ export default function MarketingNav() {
               <div className="py-2">
 
               </div>
-              <a href="/register">
+              <a href={getLoginUrl()}>
                 <Button variant="ghost" className="w-full">
                   Login
                 </Button>
               </a>
-              <a href="/register">
+              <a href={getSignupUrl()}>
                 <Button className="w-full">Get Started</Button>
               </a>
             </div>
