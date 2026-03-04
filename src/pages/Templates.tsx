@@ -1150,27 +1150,23 @@ Date: _________________`;
                     <CardDescription>{docType.description}</CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <Button 
-                      className={`w-full bg-gradient-to-r ${docType.color} hover:opacity-90`}
-                      onClick={(e) => {
-                        if (demoCount >= 2) {
-                          e.stopPropagation();
-                          window.location.href = buildTemplateSignupPath(docType.id);
-                        }
-                      }}
-                    >
-                      {demoCount >= 2 ? (
-                        <>
+                    {demoCount >= 2 ? (
+                      <Link href={buildTemplateSignupPath(docType.id)} onClick={(e) => e.stopPropagation()}>
+                        <Button
+                          className={`w-full bg-gradient-to-r ${docType.color} hover:opacity-90`}
+                        >
                           <Lock className="w-4 h-4 mr-2" />
                           Subscribe to Access
-                        </>
-                      ) : (
-                        <>
-                          <Sparkles className="w-4 h-4 mr-2" />
-                          Generate Document
-                        </>
-                      )}
-                    </Button>
+                        </Button>
+                      </Link>
+                    ) : (
+                      <Button
+                        className={`w-full bg-gradient-to-r ${docType.color} hover:opacity-90`}
+                      >
+                        <Sparkles className="w-4 h-4 mr-2" />
+                        Generate Document
+                      </Button>
+                    )}
                   </CardContent>
                 </Card>
               );
