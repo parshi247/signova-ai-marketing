@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free NDA Generator - Create Professional NDAs in 60 Seconds | Signova.ai</title>
+    <meta name="description" content="Generate professional Non-Disclosure Agreements instantly. Free, no signup required. Mutual, Employee, and Contractor NDAs available.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="/favicon-white-v3.png" />
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-2">Free NDA Generator</h1>
+            <p class="text-lg text-gray-600">Create professional Non-Disclosure Agreements in 60 seconds</p>
+            <p class="text-sm text-gray-500 mt-2">✓ 100% Free  ✓ No Signup Required  ✓ Instant Download</p>
+        </div>
+
+        <!-- Form Card -->
+        <div class="bg-white rounded-lg shadow-xl p-8 mb-6">
+            <form id="ndaForm">
+                <!-- Template Type -->
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-semibold mb-3">Select NDA Type</label>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition">
+                            <input type="radio" name="templateType" value="mutual" checked class="mr-3">
+                            <div>
+                                <div class="font-semibold">Mutual NDA</div>
+                                <div class="text-sm text-gray-500">Both parties share info</div>
+                            </div>
+                        </label>
+                        <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition">
+                            <input type="radio" name="templateType" value="employee" class="mr-3">
+                            <div>
+                                <div class="font-semibold">Employee NDA</div>
+                                <div class="text-sm text-gray-500">For hiring employees</div>
+                            </div>
+                        </label>
+                        <label class="flex items-center p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 transition">
+                            <input type="radio" name="templateType" value="contractor" class="mr-3">
+                            <div>
+                                <div class="font-semibold">Contractor NDA</div>
+                                <div class="text-sm text-gray-500">For freelancers/vendors</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Party Names -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Disclosing Party Name</label>
+                        <input type="text" id="disclosingParty" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your Company Name" required>
+                        <p class="text-xs text-gray-500 mt-1">The party sharing confidential information</p>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Receiving Party Name</label>
+                        <input type="text" id="receivingParty" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Other Party Name" required>
+                        <p class="text-xs text-gray-500 mt-1">The party receiving confidential information</p>
+                    </div>
+                </div>
+
+                <!-- Purpose -->
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-semibold mb-2">Purpose of NDA</label>
+                    <textarea id="purpose" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="e.g., Potential business partnership, software development project, merger discussions..." required></textarea>
+                </div>
+
+                <!-- Term -->
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-semibold mb-2">Agreement Term (years)</label>
+                    <select id="term" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <option value="1">1 year</option>
+                        <option value="2" selected>2 years</option>
+                        <option value="3">3 years</option>
+                        <option value="5">5 years</option>
+                    </select>
+                </div>
+
+                <!-- Governing Law -->
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-semibold mb-2">Governing Law (State/Country)</label>
+                    <input type="text" id="governingLaw" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="e.g., California, United States" required>
+                </div>
+
+                <!-- Generate Button -->
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition duration-200 transform hover:scale-105">
+                    Generate NDA →
+                </button>
+            </form>
+        </div>
+
+        <!-- Result Area (Hidden Initially) -->
+        <div id="resultArea" class="hidden bg-white rounded-lg shadow-xl p-8">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-900">Your NDA is Ready!</h2>
+                <div class="space-x-3">
+                    <button onclick="copyToClipboard()" class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition">
+                        📋 Copy
+                    </button>
+                    <button onclick="downloadNDA()" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition">
+                        ⬇️ Download
+                    </button>
+                    <button onclick="signWithSignova()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition">
+                        ✍️ Sign with Signova
+                    </button>
+                </div>
+            </div>
+            <div id="ndaContent" class="prose max-w-none bg-gray-50 p-6 rounded-lg border border-gray-200 font-mono text-sm whitespace-pre-wrap"></div>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-xl p-8 text-white text-center">
+            <h3 class="text-2xl font-bold mb-3">Ready to Sign Your NDA?</h3>
+            <p class="mb-4">Use Signova.ai to collect e-signatures in minutes - start today!</p>
+            <a href="https://signova.ai/signup" class="inline-block bg-white text-blue-600 font-bold px-8 py-3 rounded-lg hover:bg-gray-100 transition">
+                Get Started →
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-8 text-gray-600 text-sm">
+            <p>Powered by <a href="https://signova.ai" class="text-blue-600 hover:underline font-semibold">Signova.ai</a> - Smart Document Signing Platform</p>
+            <p class="mt-2">⚠️ This is a template. Consult a lawyer for legal advice.</p>
+        </div>
+    </div>
+
+    <script>
+        const templates = {
+            mutual: `MUTUAL NON-DISCLOSURE AGREEMENT
+
+This Mutual Non-Disclosure Agreement ("Agreement") is entered into as of [DATE], by and between:
+
+[DISCLOSING_PARTY] ("First Party")
+and
+[RECEIVING_PARTY] ("Second Party")
+
+(collectively referred to as the "Parties")
+
+WHEREAS, the Parties wish to explore a business opportunity of mutual interest and benefit (the "Purpose") relating to: [PURPOSE];
+
+WHEREAS, in connection with the Purpose, each Party may disclose to the other certain confidential technical and business information that the disclosing Party desires the receiving Party to treat as confidential;
+
+NOW, THEREFORE, in consideration of the mutual covenants and agreements contained herein, the Parties agree as follows:
+
+1. DEFINITION OF CONFIDENTIAL INFORMATION
+
+"Confidential Information" means any information disclosed by either Party to the other Party, either directly or indirectly, in writing, orally, or by inspection of tangible objects, including without limitation:
+   a) Documents, business plans, source code, software, documentation
+   b) Product plans, designs, costs, prices and names, finances
+   c) Marketing plans, business strategies, customer information
+   d) Technical data, trade secrets, know-how, research, product plans
+   e) Any other information that should reasonably be recognized as confidential
+
+2. OBLIGATIONS OF RECEIVING PARTY
+
+Each Party agrees to:
+   a) Hold and maintain the Confidential Information in strict confidence
+   b) Not disclose the Confidential Information to third parties without prior written consent
+   c) Not use the Confidential Information for any purpose except the Purpose
+   d) Protect the Confidential Information using the same degree of care used to protect its own confidential information
+   e) Limit access to the Confidential Information to employees, contractors, and advisors who need to know
+
+3. EXCLUSIONS FROM CONFIDENTIAL INFORMATION
+
+Confidential Information shall not include information that:
+   a) Is or becomes publicly known through no breach of this Agreement
+   b) Is received from a third party without breach of any obligation of confidentiality
+   c) Is independently developed without use of or reference to the Confidential Information
+   d) Was in the receiving Party's possession before receipt from the disclosing Party
+   e) Is required to be disclosed by law or court order
+
+4. TERM AND TERMINATION
+
+This Agreement shall commence on the date first written above and shall continue for a period of [TERM] years. The obligations of confidentiality shall survive termination of this Agreement and continue for [TERM] years from the date of disclosure.
+
+5. RETURN OF MATERIALS
+
+Upon termination of this Agreement or upon request, each Party shall promptly return or destroy all Confidential Information received from the other Party, including all copies, notes, and derivatives thereof.
+
+6. NO LICENSE
+
+Nothing in this Agreement shall be construed as granting any rights under any patent, copyright, or other intellectual property right, nor shall this Agreement grant any Party any rights in or to the Confidential Information except as expressly set forth herein.
+
+7. REMEDIES
+
+Each Party acknowledges that monetary damages may be inadequate to compensate for breaches of this Agreement and that the non-breaching Party shall be entitled to seek equitable relief, including injunction and specific performance, in addition to all other remedies available at law or in equity.
+
+8. GOVERNING LAW
+
+This Agreement shall be governed by and construed in accordance with the laws of [GOVERNING_LAW], without regard to its conflict of law provisions.
+
+9. ENTIRE AGREEMENT
+
+This Agreement constitutes the entire agreement between the Parties concerning the subject matter hereof and supersedes all prior agreements and understandings, whether written or oral.
+
+10. AMENDMENTS
+
+This Agreement may not be amended except by a written document signed by both Parties.
+
+11. SEVERABILITY
+
+If any provision of this Agreement is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary so that this Agreement shall otherwise remain in full force and effect.
+
+12. WAIVER
+
+The failure of either Party to enforce any right or provision in this Agreement shall not constitute a waiver of such right or provision unless acknowledged and agreed to by such Party in writing.
+
+IN WITNESS WHEREOF, the Parties have executed this Mutual Non-Disclosure Agreement as of the date first written above.
+
+[DISCLOSING_PARTY]
+
+Signature: _______________________
+Name: ___________________________
+Title: ___________________________
+Date: ____________________________
+
+
+[RECEIVING_PARTY]
+
+Signature: _______________________
+Name: ___________________________
+Title: ___________________________
+Date: ____________________________`,
+
+            employee: `EMPLOYEE NON-DISCLOSURE AGREEMENT
+
+This Employee Non-Disclosure Agreement ("Agreement") is entered into as of [DATE], by and between:
+
+[DISCLOSING_PARTY] ("Company")
+and
+[RECEIVING_PARTY] ("Employee")
+
+WHEREAS, the Employee is or may become employed by the Company;
+
+WHEREAS, in connection with such employment, the Employee may have access to confidential and proprietary information of the Company;
+
+NOW, THEREFORE, in consideration of employment and the mutual covenants contained herein, the parties agree as follows:
+
+1. CONFIDENTIAL INFORMATION
+
+"Confidential Information" means all information relating to the Company's business, including but not limited to:
+   a) Trade secrets, inventions, ideas, processes, formulas, source code
+   b) Customer lists, supplier information, pricing information
+   c) Business plans, marketing strategies, financial information
+   d) Product development plans, technical specifications
+   e) Any information marked as "Confidential" or that should reasonably be understood to be confidential
+
+2. EMPLOYEE OBLIGATIONS
+
+The Employee agrees to:
+   a) Keep all Confidential Information strictly confidential
+   b) Not disclose Confidential Information to any third party
+   c) Not use Confidential Information except as required for employment duties
+   d) Take all reasonable precautions to prevent unauthorized disclosure
+   e) Immediately notify the Company of any unauthorized disclosure
+
+3. EXCLUSIONS
+
+Confidential Information does not include information that:
+   a) Is or becomes publicly available through no fault of Employee
+   b) Is lawfully received from a third party
+   c) Is required to be disclosed by law (with prior notice to Company)
+
+4. TERM
+
+This Agreement shall remain in effect during employment and for [TERM] years after termination of employment for any reason.
+
+5. RETURN OF PROPERTY
+
+Upon termination of employment, Employee shall immediately return all Company property, documents, and materials containing Confidential Information.
+
+6. NO LICENSE
+
+This Agreement does not grant Employee any rights to the Company's intellectual property except as necessary to perform job duties.
+
+7. REMEDIES
+
+Employee acknowledges that breach of this Agreement may cause irreparable harm to the Company, and the Company shall be entitled to seek injunctive relief in addition to all other available remedies.
+
+8. GOVERNING LAW
+
+This Agreement shall be governed by the laws of [GOVERNING_LAW].
+
+9. ENTIRE AGREEMENT
+
+This Agreement constitutes the entire agreement regarding confidentiality and supersedes all prior agreements.
+
+10. SEVERABILITY
+
+If any provision is found invalid, the remaining provisions shall remain in full force and effect.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first written above.
+
+[DISCLOSING_PARTY] (Company)
+
+Signature: _______________________
+Name: ___________________________
+Title: ___________________________
+Date: ____________________________
+
+
+[RECEIVING_PARTY] (Employee)
+
+Signature: _______________________
+Name: ___________________________
+Date: ____________________________`,
+
+            contractor: `CONTRACTOR/CONSULTANT NON-DISCLOSURE AGREEMENT
+
+This Non-Disclosure Agreement ("Agreement") is entered into as of [DATE], by and between:
+
+[DISCLOSING_PARTY] ("Company")
+and
+[RECEIVING_PARTY] ("Contractor")
+
+WHEREAS, the Contractor is providing or may provide services to the Company relating to: [PURPOSE];
+
+WHEREAS, in connection with such services, the Contractor may have access to confidential information of the Company;
+
+NOW, THEREFORE, in consideration of the engagement and mutual covenants herein, the parties agree as follows:
+
+1. CONFIDENTIAL INFORMATION
+
+"Confidential Information" means all non-public information disclosed by the Company to the Contractor, including:
+   a) Technical data, trade secrets, know-how, research, product plans
+   b) Customer lists, business strategies, marketing plans
+   c) Financial information, pricing, costs
+   d) Source code, software, documentation
+   e) Any information marked confidential or reasonably understood to be confidential
+
+2. CONTRACTOR OBLIGATIONS
+
+The Contractor agrees to:
+   a) Maintain strict confidentiality of all Confidential Information
+   b) Not disclose Confidential Information to any third party without prior written consent
+   c) Use Confidential Information solely for performing services for the Company
+   d) Protect Confidential Information with the same care used for own confidential information
+   e) Limit access to employees and subcontractors who have signed similar agreements
+
+3. EXCLUSIONS
+
+Confidential Information does not include information that:
+   a) Is or becomes publicly available through no breach of this Agreement
+   b) Is lawfully obtained from a third party
+   c) Is independently developed without use of Confidential Information
+   d) Was in Contractor's possession prior to disclosure
+   e) Must be disclosed by law (with prior notice to Company)
+
+4. OWNERSHIP
+
+All work product, inventions, and intellectual property created by Contractor in connection with services shall be the exclusive property of the Company.
+
+5. TERM
+
+This Agreement shall remain in effect during the engagement and for [TERM] years after termination.
+
+6. RETURN OF MATERIALS
+
+Upon completion or termination of services, Contractor shall immediately return or destroy all materials containing Confidential Information.
+
+7. NO LICENSE
+
+This Agreement does not grant Contractor any license or rights to the Company's intellectual property except as necessary to perform the services.
+
+8. INDEPENDENT CONTRACTOR
+
+Contractor is an independent contractor, not an employee. This Agreement does not create a partnership, joint venture, or agency relationship.
+
+9. REMEDIES
+
+Contractor acknowledges that breach may cause irreparable harm, and Company shall be entitled to seek injunctive relief and all other available remedies.
+
+10. GOVERNING LAW
+
+This Agreement shall be governed by the laws of [GOVERNING_LAW].
+
+11. ENTIRE AGREEMENT
+
+This Agreement constitutes the entire agreement regarding confidentiality and supersedes all prior agreements.
+
+12. SEVERABILITY
+
+If any provision is invalid, the remaining provisions shall remain in full force and effect.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first written above.
+
+[DISCLOSING_PARTY] (Company)
+
+Signature: _______________________
+Name: ___________________________
+Title: ___________________________
+Date: ____________________________
+
+
+[RECEIVING_PARTY] (Contractor)
+
+Signature: _______________________
+Name: ___________________________
+Date: ____________________________`
+        };
+
+        document.getElementById('ndaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const templateType = document.querySelector('input[name="templateType"]:checked').value;
+            const disclosingParty = document.getElementById('disclosingParty').value;
+            const receivingParty = document.getElementById('receivingParty').value;
+            const purpose = document.getElementById('purpose').value;
+            const term = document.getElementById('term').value;
+            const governingLaw = document.getElementById('governingLaw').value;
+            const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+            
+            let nda = templates[templateType];
+            nda = nda.replace(/\[DATE\]/g, today);
+            nda = nda.replace(/\[DISCLOSING_PARTY\]/g, disclosingParty);
+            nda = nda.replace(/\[RECEIVING_PARTY\]/g, receivingParty);
+            nda = nda.replace(/\[PURPOSE\]/g, purpose);
+            nda = nda.replace(/\[TERM\]/g, term);
+            nda = nda.replace(/\[GOVERNING_LAW\]/g, governingLaw);
+            
+            document.getElementById('ndaContent').textContent = nda;
+            document.getElementById('resultArea').classList.remove('hidden');
+            document.getElementById('resultArea').scrollIntoView({ behavior: 'smooth' });
+            
+            // Track usage
+            if (window.gtag) {
+                gtag('event', 'nda_generated', {
+                    'event_category': 'engagement',
+                    'event_label': templateType
+                });
+            }
+        });
+
+        function copyToClipboard() {
+            const content = document.getElementById('ndaContent').textContent;
+            navigator.clipboard.writeText(content).then(() => {
+                alert('✅ NDA copied to clipboard!');
+            });
+        }
+
+        function downloadNDA() {
+            const content = document.getElementById('ndaContent').textContent;
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'NDA_' + new Date().getTime() + '.txt';
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        function signWithSignova() {
+            window.location.href = 'https://signova.ai/signup?source=nda-generator';
+        }
+    </script>
+</body>
+</html>

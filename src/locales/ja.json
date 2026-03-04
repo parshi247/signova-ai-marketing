@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "features": "機能",
+    "pricing": "料金",
+    "integrations": "連携",
+    "about": "会社概要",
+    "login": "ログイン",
+    "signup": "無料登録",
+    "dashboard": "ダッシュボード"
+  },
+  "hero": {
+    "title": "AIで文書署名をより速く",
+    "subtitle": "文書ワークフローを自動化し、コンプライアンスを確保し、ビジネスを加速するインテリジェントな電子署名プラットフォーム。",
+    "cta_primary": "無料トライアル",
+    "cta_secondary": "デモを見る",
+    "trusted_by": "世界中の10,000社以上の企業に信頼されています"
+  },
+  "features": {
+    "title": "現代のビジネスのための強力な機能",
+    "subtitle": "文書署名プロセスを効率化するために必要なすべて",
+    "ai_powered": {
+      "title": "AI搭載の文書分析",
+      "description": "AIが自動的に署名フィールドを識別し、重要なデータを抽出し、改善を提案します。"
+    },
+    "secure": {
+      "title": "銀行レベルのセキュリティ",
+      "description": "256ビット暗号化、SOC 2 Type II認証、GDPR準拠で文書を保護します。"
+    },
+    "templates": {
+      "title": "スマートテンプレート",
+      "description": "データから自動入力される動的フィールドを持つ再利用可能なテンプレートを作成。"
+    },
+    "audit": {
+      "title": "完全な監査証跡",
+      "description": "タイムスタンプ、IPアドレス、詳細なアクティビティ履歴ですべてのアクションを追跡。"
+    },
+    "integrations": {
+      "title": "シームレスな連携",
+      "description": "Salesforce、HubSpot、Google Workspaceなど100以上のアプリと連携。"
+    },
+    "mobile": {
+      "title": "モバイルファーストデザイン",
+      "description": "レスポンシブなモバイル体験で、いつでもどこでも文書に署名。"
+    }
+  },
+  "pricing": {
+    "title": "シンプルで透明な料金",
+    "subtitle": "ニーズに合ったプランをお選びください。隠れた費用はありません。",
+    "monthly": "月額",
+    "annually": "年額",
+    "save": "20%お得",
+    "starter": {
+      "name": "スターター",
+      "price": "¥1,200",
+      "period": "/月",
+      "description": "個人や小規模チームに最適",
+      "features": ["月5文書", "基本テンプレート", "メールサポート", "モバイルアプリアクセス"]
+    },
+    "professional": {
+      "name": "プロフェッショナル",
+      "price": "¥3,900",
+      "period": "/月",
+      "description": "成長中の企業向け",
+      "features": ["無制限の文書", "高度なテンプレート", "優先サポート", "APIアクセス", "カスタムブランディング"]
+    },
+    "enterprise": {
+      "name": "エンタープライズ",
+      "price": "カスタム",
+      "period": "",
+      "description": "大規模組織向け",
+      "features": ["Proのすべて", "SSO/SAML", "専任アカウントマネージャー", "カスタム連携", "SLA保証"]
+    },
+    "cta": "始める"
+  },
+  "testimonials": {
+    "title": "お客様の声",
+    "subtitle": "数千の満足した企業に参加"
+  },
+  "cta": {
+    "title": "文書ワークフローを変革する準備はできましたか？",
+    "subtitle": "今日から無料トライアルを開始。クレジットカード不要。",
+    "button": "無料トライアル"
+  },
+  "footer": {
+    "product": "製品",
+    "company": "会社",
+    "resources": "リソース",
+    "legal": "法的情報",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "security": "セキュリティ",
+    "copyright": "© 2025 Signova. All rights reserved."
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "retry": "再試行",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "delete": "削除",
+    "edit": "編集",
+    "view": "表示",
+    "download": "ダウンロード",
+    "upload": "アップロード",
+    "search": "検索",
+    "filter": "フィルター",
+    "sort": "並べ替え",
+    "next": "次へ",
+    "previous": "前へ",
+    "submit": "送信",
+    "confirm": "確認"
+  }
+}

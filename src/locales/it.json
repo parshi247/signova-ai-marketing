@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Funzionalità",
+    "pricing": "Prezzi",
+    "integrations": "Integrazioni",
+    "about": "Chi siamo",
+    "login": "Accedi",
+    "signup": "Registrati gratis",
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "title": "Firma documenti più velocemente con l'IA",
+    "subtitle": "La piattaforma intelligente di firma elettronica che automatizza i flussi documentali, garantisce la conformità e accelera il tuo business.",
+    "cta_primary": "Prova gratuita",
+    "cta_secondary": "Guarda la demo",
+    "trusted_by": "Oltre 10.000 aziende si fidano di noi"
+  },
+  "features": {
+    "title": "Funzionalità potenti per il business moderno",
+    "subtitle": "Tutto ciò di cui hai bisogno per ottimizzare il processo di firma dei documenti",
+    "ai_powered": {
+      "title": "Analisi documenti con IA",
+      "description": "La nostra IA identifica automaticamente i campi firma, estrae dati chiave e suggerisce miglioramenti."
+    },
+    "secure": {
+      "title": "Sicurezza di livello bancario",
+      "description": "Crittografia a 256 bit, certificazione SOC 2 Type II e conformità GDPR per proteggere i tuoi documenti."
+    },
+    "templates": {
+      "title": "Modelli intelligenti",
+      "description": "Crea modelli riutilizzabili con campi dinamici che si compilano automaticamente."
+    },
+    "audit": {
+      "title": "Traccia di audit completa",
+      "description": "Traccia ogni azione con timestamp, indirizzi IP e cronologia dettagliata delle attività."
+    },
+    "integrations": {
+      "title": "Integrazioni perfette",
+      "description": "Connettiti con oltre 100 app tra cui Salesforce, HubSpot, Google Workspace e altro."
+    },
+    "mobile": {
+      "title": "Design mobile-first",
+      "description": "Firma documenti ovunque, in qualsiasi momento con la nostra esperienza mobile responsive."
+    }
+  },
+  "pricing": {
+    "title": "Prezzi semplici e trasparenti",
+    "subtitle": "Scegli il piano adatto alle tue esigenze. Nessun costo nascosto.",
+    "monthly": "Mensile",
+    "annually": "Annuale",
+    "save": "Risparmia 20%",
+    "starter": {
+      "name": "Starter",
+      "price": "9€",
+      "period": "/mese",
+      "description": "Perfetto per singoli e piccoli team",
+      "features": ["5 documenti/mese", "Modelli base", "Supporto email", "Accesso app mobile"]
+    },
+    "professional": {
+      "name": "Professional",
+      "price": "29€",
+      "period": "/mese",
+      "description": "Per aziende in crescita",
+      "features": ["Documenti illimitati", "Modelli avanzati", "Supporto prioritario", "Accesso API", "Branding personalizzato"]
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Personalizzato",
+      "period": "",
+      "description": "Per grandi organizzazioni",
+      "features": ["Tutto di Pro", "SSO/SAML", "Account manager dedicato", "Integrazioni personalizzate", "Garanzia SLA"]
+    },
+    "cta": "Inizia"
+  },
+  "testimonials": {
+    "title": "Cosa dicono i nostri clienti",
+    "subtitle": "Unisciti a migliaia di aziende soddisfatte"
+  },
+  "cta": {
+    "title": "Pronto a trasformare il tuo flusso documentale?",
+    "subtitle": "Inizia la tua prova gratuita oggi. Nessuna carta di credito richiesta.",
+    "button": "Prova gratuita"
+  },
+  "footer": {
+    "product": "Prodotto",
+    "company": "Azienda",
+    "resources": "Risorse",
+    "legal": "Legale",
+    "privacy": "Privacy Policy",
+    "terms": "Termini di Servizio",
+    "security": "Sicurezza",
+    "copyright": "© 2025 Signova. Tutti i diritti riservati."
+  },
+  "common": {
+    "loading": "Caricamento...",
+    "error": "Si è verificato un errore",
+    "retry": "Riprova",
+    "cancel": "Annulla",
+    "save": "Salva",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "view": "Visualizza",
+    "download": "Scarica",
+    "upload": "Carica",
+    "search": "Cerca",
+    "filter": "Filtra",
+    "sort": "Ordina",
+    "next": "Avanti",
+    "previous": "Indietro",
+    "submit": "Invia",
+    "confirm": "Conferma"
+  }
+}

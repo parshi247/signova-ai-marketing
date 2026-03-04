@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "features": "Funktionen",
+    "pricing": "Preise",
+    "integrations": "Integrationen",
+    "about": "Über uns",
+    "login": "Anmelden",
+    "signup": "Kostenlos registrieren",
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "title": "Dokumente schneller mit KI signieren",
+    "subtitle": "Die intelligente E-Signatur-Plattform, die Dokumenten-Workflows automatisiert, Compliance sicherstellt und Ihr Geschäft beschleunigt.",
+    "cta_primary": "Kostenlos testen",
+    "cta_secondary": "Demo ansehen",
+    "trusted_by": "Vertraut von über 10.000 Unternehmen weltweit"
+  },
+  "features": {
+    "title": "Leistungsstarke Funktionen für modernes Business",
+    "subtitle": "Alles, was Sie brauchen, um Ihren Dokumentensignierungsprozess zu optimieren",
+    "ai_powered": {
+      "title": "KI-gestützte Dokumentenanalyse",
+      "description": "Unsere KI identifiziert automatisch Signaturfelder, extrahiert wichtige Daten und schlägt Verbesserungen vor."
+    },
+    "secure": {
+      "title": "Bankniveau-Sicherheit",
+      "description": "256-Bit-Verschlüsselung, SOC 2 Type II zertifiziert und DSGVO-konform zum Schutz Ihrer Dokumente."
+    },
+    "templates": {
+      "title": "Intelligente Vorlagen",
+      "description": "Erstellen Sie wiederverwendbare Vorlagen mit dynamischen Feldern, die sich automatisch aus Ihren Daten füllen."
+    },
+    "audit": {
+      "title": "Vollständiger Audit-Trail",
+      "description": "Verfolgen Sie jede Aktion mit Zeitstempeln, IP-Adressen und detailliertem Aktivitätsverlauf."
+    },
+    "integrations": {
+      "title": "Nahtlose Integrationen",
+      "description": "Verbinden Sie sich mit über 100 Apps, darunter Salesforce, HubSpot, Google Workspace und mehr."
+    },
+    "mobile": {
+      "title": "Mobile-First Design",
+      "description": "Signieren Sie Dokumente überall und jederzeit mit unserer responsiven mobilen Erfahrung."
+    }
+  },
+  "pricing": {
+    "title": "Einfache, transparente Preise",
+    "subtitle": "Wählen Sie den Plan, der zu Ihren Bedürfnissen passt. Keine versteckten Gebühren.",
+    "monthly": "Monatlich",
+    "annually": "Jährlich",
+    "save": "20% sparen",
+    "starter": {
+      "name": "Starter",
+      "price": "9€",
+      "period": "/Monat",
+      "description": "Perfekt für Einzelpersonen und kleine Teams",
+      "features": ["5 Dokumente/Monat", "Basis-Vorlagen", "E-Mail-Support", "Mobile App-Zugang"]
+    },
+    "professional": {
+      "name": "Professional",
+      "price": "29€",
+      "period": "/Monat",
+      "description": "Für wachsende Unternehmen",
+      "features": ["Unbegrenzte Dokumente", "Erweiterte Vorlagen", "Prioritäts-Support", "API-Zugang", "Eigenes Branding"]
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Individuell",
+      "period": "",
+      "description": "Für große Organisationen",
+      "features": ["Alles in Pro", "SSO/SAML", "Dedizierter Account Manager", "Individuelle Integrationen", "SLA-Garantie"]
+    },
+    "cta": "Jetzt starten"
+  },
+  "testimonials": {
+    "title": "Was unsere Kunden sagen",
+    "subtitle": "Schließen Sie sich Tausenden zufriedener Unternehmen an"
+  },
+  "cta": {
+    "title": "Bereit, Ihren Dokumenten-Workflow zu transformieren?",
+    "subtitle": "Starten Sie noch heute Ihre kostenlose Testversion. Keine Kreditkarte erforderlich.",
+    "button": "Kostenlos testen"
+  },
+  "footer": {
+    "product": "Produkt",
+    "company": "Unternehmen",
+    "resources": "Ressourcen",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "security": "Sicherheit",
+    "copyright": "© 2025 Signova. Alle Rechte vorbehalten."
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Ein Fehler ist aufgetreten",
+    "retry": "Erneut versuchen",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "view": "Ansehen",
+    "download": "Herunterladen",
+    "upload": "Hochladen",
+    "search": "Suchen",
+    "filter": "Filtern",
+    "sort": "Sortieren",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "submit": "Absenden",
+    "confirm": "Bestätigen"
+  }
+}

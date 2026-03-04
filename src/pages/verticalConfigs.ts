@@ -1,0 +1,488 @@
+/**
+ * verticalConfigs.ts
+ * Configuration data for all 8 vertical landing pages.
+ * Each config drives the VerticalLandingPage component.
+ */
+import {
+  Clock,
+  DollarSign,
+  FileText,
+  Users,
+  AlertTriangle,
+  TrendingDown,
+  Shield,
+  Zap,
+} from "lucide-react";
+import type { VerticalConfig } from "./VerticalLandingPage";
+
+export const LAW_CONFIG: VerticalConfig = {
+  vertical: "Law",
+  slug: "law",
+  heroHeadline: "AI Document Automation for Law Firms",
+  heroSubheadline: "Generate retainer agreements, NDAs, and engagement letters in minutes. Send for e-signature instantly. Eliminate the administrative bottleneck that's costing your firm billable hours.",
+  heroStat: { value: "8 hrs/wk", label: "Average time saved per attorney on document admin" },
+  painPoints: [
+    { icon: Clock, title: "Billable Hours Lost to Admin", description: "Attorneys spend 20–30% of their time on document drafting, formatting, and chasing signatures — time that should be billed at $300–$800/hour.", cost: "Cost: $2,400–$6,400/attorney/week" },
+    { icon: AlertTriangle, title: "Compliance Risk from Manual Errors", description: "Manual document preparation introduces typos, missing clauses, and version control failures. One error in a retainer can void the agreement.", cost: "Cost: $10,000–$100,000 per malpractice incident" },
+    { icon: Users, title: "Client Experience Friction", description: "Clients expect digital-first experiences. Emailing PDFs, waiting for wet signatures, and chasing DocuSign reminders creates friction that loses clients to competitors.", cost: "Cost: 15–25% client churn from poor document UX" },
+    { icon: DollarSign, title: "DocuSign Overpayment", description: "DocuSign Business Pro costs $65–$125/user/month and still requires manual document drafting. You're paying for signatures without the AI generation.", cost: "Cost: $780–$1,500/user/year for signatures only" },
+    { icon: FileText, title: "Template Inconsistency", description: "Without centralized template management, different attorneys use different versions of the same agreement. Inconsistency creates liability.", cost: "Cost: Unquantifiable legal exposure" },
+    { icon: TrendingDown, title: "Slow Intake-to-Engagement", description: "The time from initial consultation to signed retainer averages 3–7 days. Every day of delay increases the risk of losing the client to a faster competitor.", cost: "Cost: 20–40% of prospects lost during intake delay" },
+  ],
+  workflowSteps: [
+    { step: 1, title: "Client Intake", description: "Client fills out a structured intake form. Signova AI extracts all relevant details: names, matter type, fee structure, jurisdiction.", time: "2 min" },
+    { step: 2, title: "AI Document Generation", description: "Signova generates a complete, jurisdiction-specific retainer agreement, NDA, or engagement letter — pre-populated with intake data.", time: "30 sec" },
+    { step: 3, title: "Attorney Review", description: "Attorney reviews the AI-generated document in the portal. One-click edits for any clause. Version history maintained automatically.", time: "5 min" },
+    { step: 4, title: "E-Signature Dispatch", description: "Document sent to client via email. Client signs on any device — no account required. Sequential signing for multi-party agreements.", time: "1 min" },
+    { step: 5, title: "Signed Document Stored", description: "Signed document stored with full audit trail: IP address, timestamp, device fingerprint. Automatically filed in the matter folder.", time: "Automatic" },
+  ],
+  roiInputs: { teamSize: 5, docsPerMonth: 40, hoursPerDoc: 2, hourlyRate: 150 },
+  hiringComparison: {
+    adminSalary: 52000,
+    signovaCost: 29,
+    tasksReplaced: [
+      "Document drafting and formatting",
+      "Template management and version control",
+      "Signature collection and follow-up",
+      "Audit trail maintenance",
+      "Document filing and organization",
+    ],
+  },
+  docusignDisplacement: {
+    docusignMonthly: 65,
+    signovaMonthly: 29,
+    featuresMissing: [
+      "AI document generation from intake data",
+      "Industry-specific legal templates",
+      "Jurisdiction-aware clause library",
+      "Integrated matter management",
+      "Client intake form automation",
+    ],
+    featuresGained: [
+      "AI retainer and NDA generation",
+      "50-state jurisdiction compliance",
+      "Automated client intake → document flow",
+      "Full audit trail with IP + timestamp",
+      "Unlimited templates at Professional tier",
+    ],
+  },
+  testimonial: {
+    quote: "We went from 3 days to sign a new client retainer to same-day. Signova paid for itself in the first week.",
+    name: "Michael Torres",
+    title: "Managing Partner",
+    company: "Torres & Associates Law Group",
+  },
+};
+
+export const REAL_ESTATE_CONFIG: VerticalConfig = {
+  vertical: "Real Estate",
+  slug: "real-estate",
+  heroHeadline: "AI Document Automation for Real Estate",
+  heroSubheadline: "Generate purchase agreements, lease contracts, and disclosure forms in minutes. Close deals faster without the paperwork bottleneck costing you transactions.",
+  heroStat: { value: "3 hrs → 15 min", label: "Time to prepare a complete transaction package" },
+  painPoints: [
+    { icon: Clock, title: "Transaction Delays from Paperwork", description: "Real estate agents spend 3–5 hours per transaction preparing documents manually. Delays in paperwork lose deals to faster competitors.", cost: "Cost: $5,000–$30,000 per lost transaction" },
+    { icon: AlertTriangle, title: "Disclosure Compliance Risk", description: "Missing or incorrect disclosure forms expose agents and brokers to liability. State requirements change frequently and are hard to track manually.", cost: "Cost: $25,000–$500,000 per compliance violation" },
+    { icon: FileText, title: "Lease Template Inconsistency", description: "Property managers using outdated lease templates risk unenforceable agreements. One missing clause can void a lease.", cost: "Cost: Lost rent + legal fees averaging $8,000" },
+    { icon: DollarSign, title: "DocuSign Cost Without AI Value", description: "DocuSign charges per envelope with no document generation. Agents still draft manually, then pay again to send.", cost: "Cost: $1.50–$3.00 per envelope + drafting time" },
+    { icon: Users, title: "Multi-Party Coordination Overhead", description: "Buyer, seller, agent, lender, and title company all need to sign different documents. Coordinating signatures manually creates bottlenecks.", cost: "Cost: 2–4 days of coordination per transaction" },
+    { icon: TrendingDown, title: "Offer Response Time Disadvantage", description: "In competitive markets, the agent who can submit a clean offer fastest wins. Manual document prep is a competitive disadvantage.", cost: "Cost: Lost listings and buyer clients" },
+  ],
+  workflowSteps: [
+    { step: 1, title: "Property & Party Data Entry", description: "Enter property address, buyer/seller details, and transaction terms once. Signova populates all documents automatically.", time: "3 min" },
+    { step: 2, title: "AI Document Package Generation", description: "Signova generates the complete transaction package: purchase agreement, disclosures, addenda, and cover letter — all pre-populated.", time: "45 sec" },
+    { step: 3, title: "Agent Review & Customization", description: "Review and customize any clause. Add contingencies, special terms, or broker-specific language with one click.", time: "5 min" },
+    { step: 4, title: "Multi-Party E-Signature", description: "Send to all parties simultaneously or sequentially. Each party signs on any device. Automated reminders sent every 24 hours.", time: "2 min" },
+    { step: 5, title: "Executed Package Delivered", description: "Fully executed package delivered to all parties and stored with complete audit trail. Auto-filed by property address.", time: "Automatic" },
+  ],
+  roiInputs: { teamSize: 3, docsPerMonth: 20, hoursPerDoc: 3, hourlyRate: 75 },
+  hiringComparison: {
+    adminSalary: 48000,
+    signovaCost: 29,
+    tasksReplaced: [
+      "Purchase agreement preparation",
+      "Disclosure form generation",
+      "Lease agreement drafting",
+      "Multi-party signature coordination",
+      "Document filing and storage",
+    ],
+  },
+  docusignDisplacement: {
+    docusignMonthly: 45,
+    signovaMonthly: 29,
+    featuresMissing: [
+      "AI purchase agreement generation",
+      "State-specific disclosure automation",
+      "Property data auto-population",
+      "Transaction package bundling",
+      "MLS data integration",
+    ],
+    featuresGained: [
+      "AI lease and purchase agreement generation",
+      "All 50 states disclosure compliance",
+      "Bulk send to multiple parties",
+      "Transaction timeline tracking",
+      "Unlimited document storage",
+    ],
+  },
+  testimonial: {
+    quote: "I closed 40% more transactions last quarter because I stopped losing time to paperwork. Signova is the best investment I've made in my business.",
+    name: "Sarah Chen",
+    title: "Broker/Owner",
+    company: "Chen Realty Group",
+  },
+};
+
+export const CONSTRUCTION_CONFIG: VerticalConfig = {
+  vertical: "Construction",
+  slug: "construction",
+  heroHeadline: "AI Contract Automation for Construction",
+  heroSubheadline: "Generate subcontractor agreements, lien waivers, and change orders in minutes. Protect your margins with airtight contracts — without the legal fees.",
+  heroStat: { value: "$47K", label: "Average annual savings for mid-size contractors" },
+  painPoints: [
+    { icon: DollarSign, title: "Unprotected Change Orders", description: "Verbal change orders and informal agreements cost contractors an average of $47,000 per year in unpaid work. Written, signed change orders are legally enforceable.", cost: "Cost: $47,000/year average in unpaid change orders" },
+    { icon: AlertTriangle, title: "Lien Waiver Compliance Risk", description: "Incorrect or missing lien waivers expose GCs to double-payment liability. State-specific lien laws are complex and change frequently.", cost: "Cost: $50,000–$500,000 per double-payment dispute" },
+    { icon: FileText, title: "Subcontractor Agreement Gaps", description: "Generic subcontractor agreements miss critical clauses: indemnification, insurance requirements, dispute resolution, and payment terms.", cost: "Cost: $25,000–$100,000 per contract dispute" },
+    { icon: Clock, title: "Bid Package Preparation Time", description: "Preparing a complete bid package — scope of work, specifications, terms — takes 4–8 hours per bid. Most contractors bid 10–20 projects per month.", cost: "Cost: 40–160 hours/month on bid preparation" },
+    { icon: Users, title: "Multi-Tier Subcontractor Coordination", description: "GCs managing 20+ subcontractors struggle to track who has signed what. Missing signatures delay project starts.", cost: "Cost: 2–5 day project start delays per missing signature" },
+    { icon: Shield, title: "Insurance Certificate Tracking", description: "Manually tracking subcontractor insurance certificates — expiration dates, coverage limits — creates liability exposure when certificates lapse.", cost: "Cost: Uninsured incident liability averaging $200,000+" },
+  ],
+  workflowSteps: [
+    { step: 1, title: "Project & Subcontractor Setup", description: "Enter project details and subcontractor information once. Signova creates a project workspace with all parties and document requirements.", time: "5 min" },
+    { step: 2, title: "AI Contract Generation", description: "Generate subcontractor agreements, change orders, and lien waivers with project-specific terms auto-populated. State lien law compliance built in.", time: "1 min" },
+    { step: 3, title: "PM Review & Approval", description: "Project manager reviews all documents. Approve, modify, or reject with comments. Version history maintained for all changes.", time: "10 min" },
+    { step: 4, title: "Bulk Subcontractor Signing", description: "Send all subcontractor agreements simultaneously. Track signing status in real-time. Automated reminders prevent project start delays.", time: "2 min" },
+    { step: 5, title: "Executed Documents Filed", description: "All executed documents stored by project. Lien waiver tracking dashboard shows status across all subcontractors and tiers.", time: "Automatic" },
+  ],
+  roiInputs: { teamSize: 8, docsPerMonth: 60, hoursPerDoc: 2, hourlyRate: 85 },
+  hiringComparison: {
+    adminSalary: 55000,
+    signovaCost: 99,
+    tasksReplaced: [
+      "Subcontractor agreement generation",
+      "Change order documentation",
+      "Lien waiver preparation and tracking",
+      "Bid package preparation",
+      "Insurance certificate management",
+    ],
+  },
+  docusignDisplacement: {
+    docusignMonthly: 65,
+    signovaMonthly: 29,
+    featuresMissing: [
+      "AI subcontractor agreement generation",
+      "State-specific lien waiver templates",
+      "Change order workflow automation",
+      "Project-based document organization",
+      "Multi-tier subcontractor tracking",
+    ],
+    featuresGained: [
+      "AI contract and change order generation",
+      "All 50 states lien law compliance",
+      "Bulk subcontractor signing",
+      "Project document dashboard",
+      "Lien waiver status tracking",
+    ],
+  },
+  testimonial: {
+    quote: "We recovered $83,000 in unpaid change orders in the first year because we finally had signed documentation for every scope change. Signova paid for itself 100x over.",
+    name: "Robert Martinez",
+    title: "President",
+    company: "Martinez General Contracting",
+  },
+};
+
+export const STAFFING_CONFIG: VerticalConfig = {
+  vertical: "Staffing",
+  slug: "staffing",
+  heroHeadline: "AI Document Automation for Staffing Agencies",
+  heroSubheadline: "Generate placement agreements, worker contracts, and client MSAs in minutes. Place candidates faster and protect your fees with airtight documentation.",
+  heroStat: { value: "72 hrs → 4 hrs", label: "Time from placement to signed contract" },
+  painPoints: [
+    { icon: Clock, title: "Placement Delays from Contract Bottlenecks", description: "Staffing agencies lose placements because contract negotiation and signing takes too long. Candidates accept competing offers while waiting for paperwork.", cost: "Cost: $5,000–$25,000 per lost placement fee" },
+    { icon: AlertTriangle, title: "Fee Protection Gaps", description: "Poorly drafted placement agreements fail to protect agency fees in disputes. Missing non-circumvention clauses allow clients to hire candidates directly.", cost: "Cost: $15,000–$50,000 per fee dispute" },
+    { icon: FileText, title: "Worker Classification Risk", description: "Incorrect contractor vs. employee classification in staffing agreements creates IRS and state labor law liability.", cost: "Cost: $50,000–$500,000 per misclassification audit" },
+    { icon: DollarSign, title: "MSA Negotiation Overhead", description: "Negotiating Master Service Agreements with enterprise clients takes weeks. Each redline requires legal review, delaying the entire relationship.", cost: "Cost: 3–8 weeks per enterprise MSA negotiation" },
+    { icon: Users, title: "High-Volume Contractor Onboarding", description: "Onboarding 50+ contractors per month means 50+ sets of documents to prepare, send, and track. Manual processes don't scale.", cost: "Cost: 2–4 hours per contractor onboarding" },
+    { icon: Shield, title: "Compliance Documentation Gaps", description: "Staffing agencies must maintain I-9s, background check authorizations, and confidentiality agreements. Missing documents create audit liability.", cost: "Cost: $2,000–$10,000 per I-9 violation" },
+  ],
+  workflowSteps: [
+    { step: 1, title: "Placement Details Entry", description: "Enter candidate name, client company, role, compensation, and start date. Signova auto-populates all placement documents.", time: "3 min" },
+    { step: 2, title: "AI Contract Package Generation", description: "Generate placement agreement, candidate offer letter, client confirmation, and non-circumvention clause — all in one click.", time: "30 sec" },
+    { step: 3, title: "Recruiter Review", description: "Recruiter reviews and customizes fee structure, guarantee period, and replacement terms. One-click approval for standard placements.", time: "5 min" },
+    { step: 4, title: "Parallel Signing — Candidate + Client", description: "Send to candidate and client simultaneously. Both sign independently. No waiting for one party before the other.", time: "1 min" },
+    { step: 5, title: "Placement Confirmed", description: "Fully executed placement package stored. Fee invoice generated automatically. Start date reminder sent to all parties.", time: "Automatic" },
+  ],
+  roiInputs: { teamSize: 10, docsPerMonth: 80, hoursPerDoc: 2, hourlyRate: 65 },
+  hiringComparison: {
+    adminSalary: 50000,
+    signovaCost: 99,
+    tasksReplaced: [
+      "Placement agreement generation",
+      "Candidate offer letter preparation",
+      "MSA drafting and tracking",
+      "Contractor onboarding document packages",
+      "Compliance document management",
+    ],
+  },
+  docusignDisplacement: {
+    docusignMonthly: 65,
+    signovaMonthly: 29,
+    featuresMissing: [
+      "AI placement agreement generation",
+      "Fee protection clause automation",
+      "Worker classification compliance checks",
+      "Bulk contractor onboarding",
+      "MSA template library",
+    ],
+    featuresGained: [
+      "AI placement and contractor agreement generation",
+      "Non-circumvention clause automation",
+      "Bulk candidate onboarding packages",
+      "Parallel multi-party signing",
+      "Compliance document tracking dashboard",
+    ],
+  },
+  testimonial: {
+    quote: "We scaled from 30 to 120 placements per month without adding a single admin headcount. Signova handles the paperwork so our recruiters can focus on relationships.",
+    name: "Jennifer Walsh",
+    title: "VP Operations",
+    company: "Walsh Talent Solutions",
+  },
+};
+
+export const INSURANCE_CONFIG: VerticalConfig = {
+  vertical: "Insurance",
+  slug: "insurance",
+  heroHeadline: "AI Document Automation for Insurance Agencies",
+  heroSubheadline: "Generate policy summaries, producer agreements, and claims documentation in minutes. Reduce E&O exposure and close more policies faster.",
+  heroStat: { value: "65%", label: "Reduction in E&O claims from documentation errors" },
+  painPoints: [
+    { icon: AlertTriangle, title: "E&O Exposure from Documentation Errors", description: "Errors and omissions in policy summaries, coverage confirmations, and client communications are the leading cause of E&O claims for insurance agents.", cost: "Cost: $15,000–$250,000 per E&O claim" },
+    { icon: Clock, title: "Policy Application Processing Time", description: "Manually preparing policy applications, coverage summaries, and client disclosure documents takes 2–4 hours per new client.", cost: "Cost: 40–80 hours/month on application prep" },
+    { icon: FileText, title: "Producer Agreement Inconsistency", description: "Agencies using multiple carrier producer agreements struggle with inconsistent terms, commission structures, and compliance requirements.", cost: "Cost: Commission disputes averaging $12,000" },
+    { icon: DollarSign, title: "Claims Documentation Delays", description: "Slow claims documentation — proof of loss, reservation of rights letters, coverage denial letters — delays resolution and increases litigation risk.", cost: "Cost: $5,000–$50,000 per delayed claim resolution" },
+    { icon: Users, title: "Client Onboarding Friction", description: "New client onboarding requires multiple documents: application, coverage selection, disclosure forms, and payment authorization. Manual prep creates delays.", cost: "Cost: 30–40% of prospects lost during slow onboarding" },
+    { icon: Shield, title: "Regulatory Compliance Documentation", description: "State insurance regulations require specific disclosure language, cancellation notices, and renewal notifications. Manual compliance is error-prone.", cost: "Cost: $5,000–$100,000 per regulatory violation" },
+  ],
+  workflowSteps: [
+    { step: 1, title: "Client & Coverage Data Entry", description: "Enter client information, coverage type, limits, and carrier details. Signova populates all required documents automatically.", time: "4 min" },
+    { step: 2, title: "AI Document Package Generation", description: "Generate policy summary, coverage confirmation, disclosure forms, and application — all pre-populated with correct regulatory language.", time: "45 sec" },
+    { step: 3, title: "Agent Review & Compliance Check", description: "Agent reviews documents. Signova flags missing required disclosures and suggests state-specific compliance language.", time: "5 min" },
+    { step: 4, title: "Client E-Signature", description: "Client signs application, coverage selection, and disclosure forms electronically. Full audit trail for E&O defense.", time: "2 min" },
+    { step: 5, title: "Policy File Complete", description: "Complete, signed policy file stored with audit trail. Renewal reminder scheduled automatically. E&O documentation preserved.", time: "Automatic" },
+  ],
+  roiInputs: { teamSize: 6, docsPerMonth: 50, hoursPerDoc: 2.5, hourlyRate: 70 },
+  hiringComparison: {
+    adminSalary: 50000,
+    signovaCost: 29,
+    tasksReplaced: [
+      "Policy summary and coverage confirmation",
+      "Application preparation and submission",
+      "Disclosure form generation",
+      "Claims documentation preparation",
+      "Renewal notification management",
+    ],
+  },
+  docusignDisplacement: {
+    docusignMonthly: 65,
+    signovaMonthly: 29,
+    featuresMissing: [
+      "AI policy summary generation",
+      "State-specific disclosure automation",
+      "E&O documentation audit trail",
+      "Coverage confirmation letter generation",
+      "Regulatory compliance language library",
+    ],
+    featuresGained: [
+      "AI policy and coverage document generation",
+      "E&O-defensible audit trail",
+      "State regulatory compliance built in",
+      "Claims documentation templates",
+      "Automated renewal notification workflow",
+    ],
+  },
+  testimonial: {
+    quote: "Our E&O claims dropped to zero in the 18 months since we implemented Signova. The audit trail alone is worth 10x the subscription cost.",
+    name: "David Kim",
+    title: "Agency Principal",
+    company: "Kim Insurance Group",
+  },
+};
+
+export const MORTGAGE_CONFIG: VerticalConfig = {
+  vertical: "Mortgage",
+  slug: "mortgage",
+  heroHeadline: "AI Document Automation for Mortgage Brokers",
+  heroSubheadline: "Generate loan disclosures, broker agreements, and closing documents in minutes. Close more loans faster with airtight RESPA-compliant documentation.",
+  heroStat: { value: "3 days → 4 hrs", label: "Time to prepare a complete loan disclosure package" },
+  painPoints: [
+    { icon: AlertTriangle, title: "RESPA Compliance Risk", description: "RESPA requires specific disclosure timing and content. Manual preparation of Loan Estimates and Closing Disclosures creates compliance risk.", cost: "Cost: $10,000 per RESPA violation + loan rescission" },
+    { icon: Clock, title: "Loan Processing Bottlenecks", description: "Mortgage brokers spend 4–8 hours per loan file on document preparation. With 20+ loans in process, this creates unsustainable administrative overhead.", cost: "Cost: 80–160 hours/month on document prep" },
+    { icon: FileText, title: "Broker Agreement Inconsistency", description: "Using different broker agreement versions for different lenders creates confusion and potential liability. Centralized template management is essential.", cost: "Cost: Compliance exposure per inconsistent agreement" },
+    { icon: DollarSign, title: "Rate Lock Documentation Delays", description: "Slow rate lock confirmation documentation can cause rate lock expirations, costing borrowers money and damaging broker relationships.", cost: "Cost: $2,000–$10,000 per expired rate lock" },
+    { icon: Users, title: "Multi-Party Closing Coordination", description: "Coordinating signatures from borrower, co-borrower, title company, and lender for closing documents is a logistical challenge.", cost: "Cost: 2–5 day closing delays from signature coordination" },
+    { icon: Shield, title: "Adverse Action Notice Compliance", description: "ECOA requires adverse action notices within specific timeframes. Manual tracking of denial decisions and notice preparation creates compliance risk.", cost: "Cost: $500–$10,000 per ECOA violation" },
+  ],
+  workflowSteps: [
+    { step: 1, title: "Borrower & Loan Data Entry", description: "Enter borrower information, loan amount, rate, terms, and property details. Signova auto-populates all disclosure documents.", time: "5 min" },
+    { step: 2, title: "AI Disclosure Package Generation", description: "Generate Loan Estimate, broker fee agreement, and all required RESPA disclosures — CFPB-compliant language built in.", time: "1 min" },
+    { step: 3, title: "Broker Review & Compliance Check", description: "Review all disclosures. Signova flags timing requirements and missing required fields before sending.", time: "10 min" },
+    { step: 4, title: "Borrower E-Signature", description: "Borrower signs all disclosures electronically. Timestamp recorded for RESPA compliance. Co-borrower signing handled sequentially.", time: "2 min" },
+    { step: 5, title: "Loan File Complete", description: "Complete disclosure package stored with RESPA-compliant timestamps. Closing disclosure generated from same data when ready.", time: "Automatic" },
+  ],
+  roiInputs: { teamSize: 4, docsPerMonth: 25, hoursPerDoc: 4, hourlyRate: 90 },
+  hiringComparison: {
+    adminSalary: 55000,
+    signovaCost: 29,
+    tasksReplaced: [
+      "Loan Estimate preparation",
+      "Closing Disclosure generation",
+      "Broker fee agreement drafting",
+      "Adverse action notice preparation",
+      "Rate lock confirmation documentation",
+    ],
+  },
+  docusignDisplacement: {
+    docusignMonthly: 65,
+    signovaMonthly: 29,
+    featuresMissing: [
+      "AI Loan Estimate generation",
+      "RESPA compliance built in",
+      "CFPB disclosure language library",
+      "Adverse action notice automation",
+      "Closing disclosure generation",
+    ],
+    featuresGained: [
+      "AI RESPA-compliant disclosure generation",
+      "CFPB-approved disclosure language",
+      "Timing compliance tracking",
+      "Multi-party closing coordination",
+      "Complete loan file audit trail",
+    ],
+  },
+  testimonial: {
+    quote: "I went from spending Sunday afternoons on loan disclosures to having them done in 20 minutes on Friday. Signova gave me my weekends back and my compliance score went up.",
+    name: "Patricia Nguyen",
+    title: "Mortgage Broker",
+    company: "Nguyen Mortgage Solutions",
+  },
+};
+
+export const ACCOUNTING_CONFIG: VerticalConfig = {
+  vertical: "Accounting",
+  slug: "accounting",
+  heroHeadline: "AI Document Automation for Accounting Firms",
+  heroSubheadline: "Generate engagement letters, tax authorization forms, and client agreements in minutes. Eliminate the administrative overhead that's limiting your firm's capacity.",
+  heroStat: { value: "12 hrs/wk", label: "Average time saved per CPA on engagement letter admin" },
+  painPoints: [
+    { icon: Clock, title: "Engagement Letter Bottleneck", description: "CPAs spend 2–4 hours per client drafting, sending, and chasing engagement letters. With 100+ clients, this is 200–400 hours per year of non-billable work.", cost: "Cost: $30,000–$80,000/year in lost billable time" },
+    { icon: AlertTriangle, title: "Scope Creep Without Documentation", description: "Without signed engagement letters that clearly define scope, clients request additional services without expecting to pay. Scope creep is the #1 profitability killer for accounting firms.", cost: "Cost: 20–30% of revenue lost to undocumented scope creep" },
+    { icon: FileText, title: "Tax Authorization Form Management", description: "Managing IRS Form 2848, 8821, and state tax authorization forms for 100+ clients manually is error-prone and time-consuming.", cost: "Cost: $500–$5,000 per authorization error" },
+    { icon: DollarSign, title: "Slow Client Onboarding", description: "New client onboarding requires engagement letter, data request list, authorization forms, and privacy notice. Manual prep delays the start of billable work.", cost: "Cost: 1–2 weeks of delayed billing per new client" },
+    { icon: Users, title: "Annual Renewal Overhead", description: "Updating and re-sending engagement letters for 100+ clients at year-end is a massive administrative burden that falls during the busiest time of year.", cost: "Cost: 40–80 hours during peak season" },
+    { icon: Shield, title: "Liability Protection Gaps", description: "Engagement letters without proper limitation of liability, dispute resolution, and fee collection clauses expose firms to client disputes.", cost: "Cost: $10,000–$100,000 per fee dispute" },
+  ],
+  workflowSteps: [
+    { step: 1, title: "Client & Service Selection", description: "Select client from your database and choose services: tax preparation, bookkeeping, audit, advisory. Signova auto-populates all engagement details.", time: "2 min" },
+    { step: 2, title: "AI Engagement Letter Generation", description: "Generate a complete, AICPA-compliant engagement letter with service scope, fee schedule, limitation of liability, and payment terms.", time: "30 sec" },
+    { step: 3, title: "Partner Review", description: "Partner reviews and approves. Customize fee structure, add special terms, or apply firm-specific language. One-click approval for standard engagements.", time: "3 min" },
+    { step: 4, title: "Client E-Signature", description: "Client signs engagement letter electronically. Automated reminders sent every 48 hours until signed. Tax season deadline tracking built in.", time: "1 min" },
+    { step: 5, title: "Engagement File Created", description: "Signed engagement letter filed automatically. Scope of work extracted and added to project management system. Billing schedule activated.", time: "Automatic" },
+  ],
+  roiInputs: { teamSize: 5, docsPerMonth: 30, hoursPerDoc: 2, hourlyRate: 120 },
+  hiringComparison: {
+    adminSalary: 52000,
+    signovaCost: 29,
+    tasksReplaced: [
+      "Engagement letter drafting and sending",
+      "Tax authorization form management",
+      "Client onboarding document packages",
+      "Annual engagement letter renewals",
+      "Fee agreement preparation",
+    ],
+  },
+  docusignDisplacement: {
+    docusignMonthly: 65,
+    signovaMonthly: 29,
+    featuresMissing: [
+      "AI engagement letter generation",
+      "AICPA compliance built in",
+      "Tax authorization form templates",
+      "Annual renewal automation",
+      "Scope of work extraction",
+    ],
+    featuresGained: [
+      "AI AICPA-compliant engagement letter generation",
+      "IRS authorization form templates",
+      "Bulk annual renewal workflow",
+      "Scope protection clause library",
+      "Client onboarding document packages",
+    ],
+  },
+  testimonial: {
+    quote: "Tax season used to mean 3 weeks of engagement letter chaos. Now it's 2 days. We onboarded 40 new clients this year without adding any admin staff.",
+    name: "Amanda Foster",
+    title: "Managing Partner",
+    company: "Foster & Associates CPA",
+  },
+};
+
+export const HEALTHCARE_CONFIG: VerticalConfig = {
+  vertical: "Healthcare",
+  slug: "healthcare",
+  heroHeadline: "AI Document Automation for Healthcare Practices",
+  heroSubheadline: "Generate HIPAA-compliant patient intake forms, consent documents, and provider agreements in minutes. Reduce administrative burden and protect your practice.",
+  heroStat: { value: "45 min → 8 min", label: "Patient intake time with automated forms" },
+  painPoints: [
+    { icon: Shield, title: "HIPAA Compliance Documentation Risk", description: "HIPAA requires specific language in patient consent forms, business associate agreements, and notice of privacy practices. Manual preparation creates compliance gaps.", cost: "Cost: $100–$50,000 per HIPAA violation" },
+    { icon: Clock, title: "Patient Intake Bottleneck", description: "Paper-based or manual digital intake processes take 30–45 minutes per patient. This creates waiting room backups and reduces daily patient capacity.", cost: "Cost: 2–4 fewer patients per day = $200–$800 lost revenue" },
+    { icon: FileText, title: "Consent Form Management", description: "Managing procedure-specific consent forms — surgical, anesthesia, treatment — across multiple providers and locations is complex and error-prone.", cost: "Cost: Informed consent liability averaging $250,000" },
+    { icon: DollarSign, title: "Provider Agreement Complexity", description: "Physician employment agreements, independent contractor agreements, and locum tenens contracts require specialized language that generic templates miss.", cost: "Cost: $50,000–$500,000 per provider agreement dispute" },
+    { icon: Users, title: "Insurance Authorization Documentation", description: "Prior authorization requests, appeal letters, and insurance correspondence require precise documentation. Manual preparation is slow and inconsistent.", cost: "Cost: 30–40% of prior auth denials from documentation errors" },
+    { icon: AlertTriangle, title: "Telemedicine Consent Compliance", description: "Telemedicine requires state-specific consent forms and technology disclosure documents. Compliance requirements vary by state and change frequently.", cost: "Cost: $1,000–$10,000 per telemedicine consent violation" },
+  ],
+  workflowSteps: [
+    { step: 1, title: "Patient & Visit Data Entry", description: "Enter patient demographics, insurance information, and visit type. Signova generates the complete intake and consent package automatically.", time: "3 min" },
+    { step: 2, title: "AI HIPAA-Compliant Document Generation", description: "Generate patient intake form, HIPAA notice of privacy practices, procedure consent, and financial agreement — all HIPAA-compliant.", time: "30 sec" },
+    { step: 3, title: "Provider Review", description: "Provider or office manager reviews documents. Procedure-specific consent forms customized for the planned treatment.", time: "5 min" },
+    { step: 4, title: "Patient E-Signature (Pre-Visit)", description: "Patient signs all intake and consent documents before arriving. Reduces waiting room time to near zero. Mobile-friendly for any device.", time: "2 min" },
+    { step: 5, title: "Patient File Complete", description: "Complete, signed patient file stored with HIPAA-compliant audit trail. Documents accessible to authorized providers only.", time: "Automatic" },
+  ],
+  roiInputs: { teamSize: 8, docsPerMonth: 200, hoursPerDoc: 0.5, hourlyRate: 45 },
+  hiringComparison: {
+    adminSalary: 48000,
+    signovaCost: 99,
+    tasksReplaced: [
+      "Patient intake form preparation",
+      "HIPAA consent document generation",
+      "Procedure-specific consent forms",
+      "Insurance authorization documentation",
+      "Provider agreement preparation",
+    ],
+  },
+  docusignDisplacement: {
+    docusignMonthly: 65,
+    signovaMonthly: 29,
+    featuresMissing: [
+      "AI HIPAA-compliant document generation",
+      "Procedure-specific consent templates",
+      "Notice of privacy practices automation",
+      "Prior authorization letter generation",
+      "Telemedicine consent compliance",
+    ],
+    featuresGained: [
+      "AI HIPAA-compliant intake and consent generation",
+      "Pre-visit patient e-signature workflow",
+      "Procedure consent template library",
+      "Provider agreement generation",
+      "HIPAA audit trail for all documents",
+    ],
+  },
+  testimonial: {
+    quote: "Our no-show rate dropped 25% after we implemented pre-visit digital intake. Patients who complete their forms before arriving are more committed to their appointments.",
+    name: "Dr. Marcus Johnson",
+    title: "Medical Director",
+    company: "Johnson Family Medicine",
+  },
+};

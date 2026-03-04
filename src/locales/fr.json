@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "integrations": "Intégrations",
+    "about": "À propos",
+    "login": "Connexion",
+    "signup": "Inscription gratuite",
+    "dashboard": "Tableau de bord"
+  },
+  "hero": {
+    "title": "Signez vos documents plus vite avec l'IA",
+    "subtitle": "La plateforme de signature électronique intelligente qui automatise les flux documentaires, assure la conformité et accélère votre activité.",
+    "cta_primary": "Essai gratuit",
+    "cta_secondary": "Voir la démo",
+    "trusted_by": "Plus de 10 000 entreprises nous font confiance"
+  },
+  "features": {
+    "title": "Des fonctionnalités puissantes pour les entreprises modernes",
+    "subtitle": "Tout ce dont vous avez besoin pour optimiser votre processus de signature",
+    "ai_powered": {
+      "title": "Analyse documentaire par IA",
+      "description": "Notre IA identifie automatiquement les champs de signature, extrait les données clés et suggère des améliorations."
+    },
+    "secure": {
+      "title": "Sécurité de niveau bancaire",
+      "description": "Chiffrement 256 bits, certifié SOC 2 Type II et conforme au RGPD pour protéger vos documents."
+    },
+    "templates": {
+      "title": "Modèles intelligents",
+      "description": "Créez des modèles réutilisables avec des champs dynamiques qui se remplissent automatiquement."
+    },
+    "audit": {
+      "title": "Piste d'audit complète",
+      "description": "Suivez chaque action avec horodatage, adresses IP et historique détaillé des activités."
+    },
+    "integrations": {
+      "title": "Intégrations transparentes",
+      "description": "Connectez-vous à plus de 100 applications dont Salesforce, HubSpot, Google Workspace et plus."
+    },
+    "mobile": {
+      "title": "Conception mobile-first",
+      "description": "Signez des documents partout, à tout moment avec notre expérience mobile responsive."
+    }
+  },
+  "pricing": {
+    "title": "Tarification simple et transparente",
+    "subtitle": "Choisissez le forfait adapté à vos besoins. Sans frais cachés.",
+    "monthly": "Mensuel",
+    "annually": "Annuel",
+    "save": "Économisez 20%",
+    "starter": {
+      "name": "Starter",
+      "price": "9€",
+      "period": "/mois",
+      "description": "Parfait pour les particuliers et petites équipes",
+      "features": ["5 documents/mois", "Modèles de base", "Support par email", "Accès application mobile"]
+    },
+    "professional": {
+      "name": "Professionnel",
+      "price": "29€",
+      "period": "/mois",
+      "description": "Pour les entreprises en croissance",
+      "features": ["Documents illimités", "Modèles avancés", "Support prioritaire", "Accès API", "Personnalisation de marque"]
+    },
+    "enterprise": {
+      "name": "Entreprise",
+      "price": "Sur mesure",
+      "period": "",
+      "description": "Pour les grandes organisations",
+      "features": ["Tout de Pro", "SSO/SAML", "Gestionnaire de compte dédié", "Intégrations personnalisées", "Garantie SLA"]
+    },
+    "cta": "Commencer"
+  },
+  "testimonials": {
+    "title": "Ce que disent nos clients",
+    "subtitle": "Rejoignez des milliers d'entreprises satisfaites"
+  },
+  "cta": {
+    "title": "Prêt à transformer votre flux documentaire ?",
+    "subtitle": "Commencez votre essai gratuit aujourd'hui. Aucune carte de crédit requise.",
+    "button": "Essai gratuit"
+  },
+  "footer": {
+    "product": "Produit",
+    "company": "Entreprise",
+    "resources": "Ressources",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "security": "Sécurité",
+    "copyright": "© 2025 Signova. Tous droits réservés."
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "retry": "Réessayer",
+    "cancel": "Annuler",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "download": "Télécharger",
+    "upload": "Importer",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Soumettre",
+    "confirm": "Confirmer"
+  }
+}

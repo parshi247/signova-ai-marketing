@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+Disallow: /dashboard
+Disallow: /documents
+Disallow: /settings
+Disallow: /admin
+Disallow: /api/
+Disallow: /trpc/
+Disallow: /checkout
+Disallow: /sign/
+
+Sitemap: https://signova.ai/sitemap.xml

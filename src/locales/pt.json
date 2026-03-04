@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "home": "Início",
+    "features": "Recursos",
+    "pricing": "Preços",
+    "integrations": "Integrações",
+    "about": "Sobre",
+    "login": "Entrar",
+    "signup": "Cadastre-se grátis",
+    "dashboard": "Painel"
+  },
+  "hero": {
+    "title": "Assine documentos mais rápido com IA",
+    "subtitle": "A plataforma inteligente de assinatura eletrônica que automatiza fluxos de trabalho, garante conformidade e acelera seu negócio.",
+    "cta_primary": "Teste grátis",
+    "cta_secondary": "Ver demo",
+    "trusted_by": "Mais de 10.000 empresas confiam em nós"
+  },
+  "features": {
+    "title": "Recursos poderosos para empresas modernas",
+    "subtitle": "Tudo que você precisa para otimizar seu processo de assinatura de documentos",
+    "ai_powered": {
+      "title": "Análise de documentos com IA",
+      "description": "Nossa IA identifica automaticamente campos de assinatura, extrai dados importantes e sugere melhorias."
+    },
+    "secure": {
+      "title": "Segurança de nível bancário",
+      "description": "Criptografia de 256 bits, certificação SOC 2 Type II e conformidade com LGPD para proteger seus documentos."
+    },
+    "templates": {
+      "title": "Modelos inteligentes",
+      "description": "Crie modelos reutilizáveis com campos dinâmicos que se preenchem automaticamente."
+    },
+    "audit": {
+      "title": "Trilha de auditoria completa",
+      "description": "Rastreie cada ação com carimbos de data/hora, endereços IP e histórico detalhado de atividades."
+    },
+    "integrations": {
+      "title": "Integrações perfeitas",
+      "description": "Conecte-se com mais de 100 aplicativos incluindo Salesforce, HubSpot, Google Workspace e mais."
+    },
+    "mobile": {
+      "title": "Design mobile-first",
+      "description": "Assine documentos em qualquer lugar, a qualquer momento com nossa experiência móvel responsiva."
+    }
+  },
+  "pricing": {
+    "title": "Preços simples e transparentes",
+    "subtitle": "Escolha o plano que se adapta às suas necessidades. Sem taxas ocultas.",
+    "monthly": "Mensal",
+    "annually": "Anual",
+    "save": "Economize 20%",
+    "starter": {
+      "name": "Starter",
+      "price": "R$45",
+      "period": "/mês",
+      "description": "Perfeito para indivíduos e pequenas equipes",
+      "features": ["5 documentos/mês", "Modelos básicos", "Suporte por email", "Acesso ao app móvel"]
+    },
+    "professional": {
+      "name": "Profissional",
+      "price": "R$145",
+      "period": "/mês",
+      "description": "Para empresas em crescimento",
+      "features": ["Documentos ilimitados", "Modelos avançados", "Suporte prioritário", "Acesso à API", "Marca personalizada"]
+    },
+    "enterprise": {
+      "name": "Empresarial",
+      "price": "Personalizado",
+      "period": "",
+      "description": "Para grandes organizações",
+      "features": ["Tudo do Pro", "SSO/SAML", "Gerente de conta dedicado", "Integrações personalizadas", "Garantia SLA"]
+    },
+    "cta": "Começar"
+  },
+  "testimonials": {
+    "title": "O que nossos clientes dizem",
+    "subtitle": "Junte-se a milhares de empresas satisfeitas"
+  },
+  "cta": {
+    "title": "Pronto para transformar seu fluxo de documentos?",
+    "subtitle": "Comece seu teste grátis hoje. Não é necessário cartão de crédito.",
+    "button": "Teste grátis"
+  },
+  "footer": {
+    "product": "Produto",
+    "company": "Empresa",
+    "resources": "Recursos",
+    "legal": "Legal",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "security": "Segurança",
+    "copyright": "© 2025 Signova. Todos os direitos reservados."
+  },
+  "common": {
+    "loading": "Carregando...",
+    "error": "Ocorreu um erro",
+    "retry": "Tentar novamente",
+    "cancel": "Cancelar",
+    "save": "Salvar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "view": "Ver",
+    "download": "Baixar",
+    "upload": "Enviar",
+    "search": "Pesquisar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "confirm": "Confirmar"
+  }
+}
