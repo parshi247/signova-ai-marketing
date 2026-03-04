@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { APP_LOGO, APP_TITLE, getLoginUrl, getSignupUrl } from "@/const";
+import { APP_LOGO, APP_TITLE, getLoginUrl, getSignupUrl, buildPlanSignupPath } from "@/const";
 import { CheckCircle2, X, Sparkles, Brain, Rocket, Zap, Loader2, ArrowRight} from "lucide-react";
 import MarketingNav from "@/components/MarketingNav";
 import MarketingFooter from "@/components/MarketingFooter";
@@ -340,9 +340,10 @@ export default function Pricing() {
                       <Button
                         onClick={() => {
                           if (meta.cta === "Contact Sales") {
-                            window.location.href = "mailto:sales@signova.ai";
+                            window.location.href = "/contact?topic=enterprise";
                           } else {
-                            window.location.href = getSignupUrl(tier.display_name || tier.tier_name, displayPrice);
+                            const key = tier.tier_key || (tier.tier_name || "").toLowerCase();
+                            window.location.href = buildPlanSignupPath(key, displayPrice);
                           }
                         }}
                         className={`w-full mb-4 ${

@@ -1,3 +1,4 @@
+import { buildTemplateSignupPath } from "@/const";
 import React, { useState, useEffect } from 'react';
 import { Link } from "wouter";
 import { 
@@ -1151,7 +1152,12 @@ Date: _________________`;
                   <CardContent>
                     <Button 
                       className={`w-full bg-gradient-to-r ${docType.color} hover:opacity-90`}
-                      disabled={demoCount >= 2}
+                      onClick={(e) => {
+                        if (demoCount >= 2) {
+                          e.stopPropagation();
+                          window.location.href = buildTemplateSignupPath(docType.id);
+                        }
+                      }}
                     >
                       {demoCount >= 2 ? (
                         <>
@@ -1221,7 +1227,7 @@ Date: _________________`;
               <p className="text-xl mb-8 opacity-90">
                 Unlock unlimited document generation, e-signatures, and more
               </p>
-              <Link href="/checkout?plan=professional">
+              <Link href="/register?plan=professional">
                 <Button size="lg" className="bg-white text-indigo-600 hover:bg-gray-100">
                   <Star className="w-5 h-5 mr-2" />
                   Subscribe Now
@@ -1334,7 +1340,7 @@ Date: _________________`;
                   <Download className="w-4 h-4 mr-2" />
                   Download Demo (TXT)
                 </Button>
-                <Link href="/checkout?plan=professional">
+                <Link href="/register?plan=professional">
                   <Button className="w-full bg-gradient-to-r from-indigo-700 to-indigo-900">
                     <Star className="w-4 h-4 mr-2" />
                     Subscribe to Remove Watermark & Enable E-Signing
@@ -1401,7 +1407,7 @@ Date: _________________`;
               </ul>
             </div>
 
-            <Link href="/checkout?plan=professional">
+            <Link href="/register?plan=professional">
               <Button className="w-full bg-gradient-to-r from-indigo-700 to-indigo-900">
                 <Star className="w-4 h-4 mr-2" />
                 Subscribe Now - Starting at $19/month
