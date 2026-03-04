@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import MarketingNav from "@/components/MarketingNav";
@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 
 export default function MarketingHome() {
+  const [, navigate] = useLocation();
   const { freePlanEnabled, showNoCreditCardCopy, showFreeForeverCopy, primaryCtaText } = usePricingConfig();
   const features = [
     {
@@ -162,7 +163,7 @@ export default function MarketingHome() {
               {/* Dual CTA */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
                 <Button
-                  onClick={() => window.location.href = getSignupUrl() + '?path=generate'}
+                  onClick={() => navigate(getSignupUrl() + '?path=generate')}
                   size="lg"
                   className="text-base px-8 py-6 bg-blue-900 hover:bg-blue-950 text-white shadow-lg shadow-slate-900/10 transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5"
                 >
@@ -170,7 +171,7 @@ export default function MarketingHome() {
                   Generate with AI
                 </Button>
                 <Button
-                  onClick={() => window.location.href = getSignupUrl() + '?path=upload'}
+                  onClick={() => navigate(getSignupUrl() + '?path=upload')}
                   size="lg"
                   variant="outline"
                   className="text-base px-8 py-6 border-slate-300 text-slate-700 hover:bg-slate-50 transition-all duration-200"
@@ -222,7 +223,7 @@ export default function MarketingHome() {
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button
-                  onClick={() => window.location.href = getSignupUrl()}
+                  onClick={() => navigate(getSignupUrl())}
                   className="bg-blue-900 hover:bg-blue-950 text-white px-6"
                 >
                   Get Started Free
@@ -361,7 +362,7 @@ export default function MarketingHome() {
                     </div>
                   ))}
                 </div>
-                <Button variant="outline" className="w-full mt-2 bg-background" onClick={() => window.location.href = getSignupUrl() + '?path=upload'}>Upload &amp; Send Now</Button>
+                <Button variant="outline" className="w-full mt-2 bg-background" onClick={() => navigate(getSignupUrl() + '?path=upload')}>Upload &amp; Send Now</Button>
               </div>
               <div className="rounded-2xl border border-indigo-600 bg-gradient-to-br from-indigo-700 to-blue-50 dark:from-indigo-700/20 dark:to-blue-950/20 p-8 space-y-5">
                 <div className="flex items-center gap-3 mb-2">
@@ -383,7 +384,7 @@ export default function MarketingHome() {
                     </div>
                   ))}
                 </div>
-                <Button className="w-full mt-2 bg-gradient-to-r from-indigo-700 to-indigo-900 hover:from-indigo-700 hover:to-blue-700" onClick={() => window.location.href = getSignupUrl() + '?path=generate'}>
+                <Button className="w-full mt-2 bg-gradient-to-r from-indigo-700 to-indigo-900 hover:from-indigo-700 hover:to-blue-700" onClick={() => navigate(getSignupUrl() + '?path=generate')}>
                   <Sparkles className="mr-2 h-4 w-4" />
                   Generate with AI
                 </Button>
@@ -469,7 +470,7 @@ export default function MarketingHome() {
                       Start Free
                     </Button>
                   </Link>
-                  <Button onClick={() => window.location.href = getSignupUrl()} size="lg" variant="outline">
+                  <Button onClick={() => navigate(getSignupUrl())} size="lg" variant="outline">
                     {primaryCtaText}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
@@ -573,7 +574,7 @@ export default function MarketingHome() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Button onClick={() => window.location.href = getSignupUrl()}
+              <Button onClick={() => navigate(getSignupUrl())}
                 size="lg"
                 variant="outline"
                 className="text-lg px-8 bg-transparent border-white text-white hover:bg-white hover:text-indigo-400"
