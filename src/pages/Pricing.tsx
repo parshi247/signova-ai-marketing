@@ -338,7 +338,7 @@ export default function Pricing() {
                         )}
                       </div>
                       {meta.cta === "Contact Sales" ? (
-                        <Link href="/contact?topic=enterprise">
+                        <a href="https://signova.ai/contact?topic=enterprise">
                           <Button
                             className={`w-full mb-4 ${
                               meta.highlight
@@ -349,9 +349,9 @@ export default function Pricing() {
                           >
                             Contact Sales
                           </Button>
-                        </Link>
+                        </a>
                       ) : (
-                        <Link href={buildPlanSignupPath(tier.tier_key || (tier.tier_name || "").toLowerCase(), displayPrice)}>
+                        <a href={buildPlanSignupPath(tier.tier_key || (tier.tier_name || "").toLowerCase(), displayPrice)}>
                           <Button
                             className={`w-full mb-4 ${
                               meta.highlight
@@ -362,7 +362,7 @@ export default function Pricing() {
                           >
                             {meta.cta === "GET_STARTED_CTA" ? primaryCtaText : meta.cta}
                           </Button>
-                        </Link>
+                        </a>
                       )}
 
                       {meta.badge && (
@@ -568,14 +568,14 @@ export default function Pricing() {
                 Ready to stop overpaying? Switch to Signova AI today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href={getSignupUrl()}>
+                <a href={getSignupUrl()}>
                   <Button
                     className="bg-indigo-700 hover:bg-indigo-800"
                   >
                     Get Started Free
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                </Link>
+                </a>
                 <Link href="/docusign-alternative">
                   <Button variant="outline">
                     See Full Comparison
@@ -617,15 +617,15 @@ export default function Pricing() {
             Join thousands of professionals using Signova to streamline their document workflows.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href={getSignupUrl()}>
+            <a href={getSignupUrl()}>
               <Button
                 size="lg"
                 className="bg-white text-indigo-600 hover:bg-gray-100"
               >
                 {primaryCtaText}
               </Button>
-            </Link>
-            <Link href="/contact?topic=enterprise">
+            </a>
+            <a href="https://signova.ai/contact?topic=enterprise">
               <Button
                 size="lg"
                 variant="outline"
@@ -633,7 +633,7 @@ export default function Pricing() {
               >
                 Contact Sales
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
