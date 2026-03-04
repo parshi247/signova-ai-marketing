@@ -180,9 +180,7 @@ export default function AIDocumentQuestionnaire() {
   };
 
   const handleGenerate = async () => {
-    console.log("[DEBUG] handleGenerate CALLED");
     alert("handleGenerate called!");
-    console.log("[DEBUG] handleGenerate called");
     console.log("[DEBUG] answers:", JSON.stringify(answers));
     setIsGenerating(true);
     try {
